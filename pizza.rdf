@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19/"
+     xml:base="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-19="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#esBaseDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#esBaseDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#esIngredienteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#esIngredienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Aceitunas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Aceitunas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Camaron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Camaron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Palmitos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#CarneDesmechada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#CarneDesmechada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jamon"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pepperoni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Carnes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Carnes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Hawaiana"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mariscos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Champiñon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Champiñon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Crema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Crema">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Hawaiana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Hawaiana">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jamon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Piña"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Tomate"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mariscos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_fruta"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_fruta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_fruta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jalapeños -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jalapeños">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jamon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jamon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pepperoni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mariscos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mariscos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_delgada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_delgada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_gruesa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_gruesa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_gruesa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#CarneDesmechada"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jalapeños"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pimenton"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Palmitos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Palmitos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_queso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pepperoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pepperoni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pimenton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pimenton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneBase"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_base">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Piña -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Piña">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza_ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Tomate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Tomate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Salsas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_carne"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_mariscos"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tieneIngrediente"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Ingredientes_vegetales"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#aceitunas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#aceitunas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Aceitunas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#camaron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#camaron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Camaron"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#carneDesmechada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#carneDesmechada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#CarneDesmechada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#champiñon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#champiñon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Champiñon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#crema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#crema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Crema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jalapeños -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jalapeños">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jalapeños"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jamon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jamon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jamon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_delgada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_delgada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_delgada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_gruesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_gruesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Masa_gruesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#mozzarella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#mozzarella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mozzarella"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#palmitos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#palmitos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Palmitos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#parmesano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#parmesano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Parmesano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pepperoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pepperoni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pepperoni"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#picante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#picante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pimenton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pimenton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pimenton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_carnes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_carnes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Carnes"/>
+        <untitled-ontology-19:tieneBase rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_delgada"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#aceitunas"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#carneDesmechada"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#mozzarella"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pepperoni"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tomate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_hawaiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_hawaiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Hawaiana"/>
+        <untitled-ontology-19:tieneBase rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_delgada"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jamon"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#mozzarella"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#piña"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tomate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_marisco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_marisco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mariscos"/>
+        <untitled-ontology-19:tieneBase rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_gruesa"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#camaron"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#crema"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#parmesano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_mexicana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_mexicana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Mexicana"/>
+        <untitled-ontology-19:tieneBase rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_gruesa"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#carneDesmechada"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#jalapeños"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#mozzarella"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#picante"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pimenton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_vegetariana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pizza_vegetariana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Vegetariana"/>
+        <untitled-ontology-19:tieneBase rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#masa_delgada"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#aceitunas"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#crema"/>
+        <untitled-ontology-19:tieneIngrediente rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#pimenton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#piña -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#piña">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Piña"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tomate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#tomate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Tomate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Aceitunas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Champiñon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Jalapeños"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Pimenton"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Crema"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Picante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jsang/ontologies/2023/2/untitled-ontology-19#Tomate"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
